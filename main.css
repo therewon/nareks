@@ -121,22 +121,25 @@ header menu li {
 
 /* Projects Section  */
 .projects {
-    padding: 60px 0;    
+    padding: 60px 0;
 }
 
-.projects__inner {
+.projects__inner,
+.layihe__inner {
     background: #363435;
     border-radius: 32px;
     padding: 30px;
 }
 
-.projects p {
+.projects p,
+.layihe p {
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
 }
 
-.projects .btn {
+.projects .btn,
+.layihe .btn {
     cursor: pointer;
     padding: 1rem 4rem;
     border: 0;
@@ -157,16 +160,19 @@ header menu li {
     border-radius: 16px;
 }
 
-.projects .btn:hover {
-    box-shadow: 0px 5px 0px 0px  #960400;
+.projects .btn:hover,
+.layihe .btn:hover {
+    box-shadow: 0px 5px 0px 0px #960400;
     background-color: #960400;
 }
 
-.projects .btn:hover::before {
+.projects .btn:hover::before,
+.layihe .btn:hover::before {
     width: 100%;
 }
 
-.projects .btn::before {
+.projects .btn::before,
+.layihe .btn::before {
     content: "";
     position: absolute;
     left: 0;
@@ -177,19 +183,21 @@ header menu li {
     transition: all 0.9s ease-in-out;
 }
 
-.projects .swiper-slide{
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 420px;
-  border-radius: 24px;
-  cursor: pointer;
+.projects .swiper-slide,
+.layihe .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+    border-radius: 24px;
+    cursor: pointer;
 }
 
-.projects .swiper-slide span {
+.projects .swiper-slide span,
+.layihe .swiper-slide span {
     position: absolute;
     z-index: 5;
     color: #000;
@@ -205,7 +213,8 @@ header menu li {
     max-width: 80%;
 }
 
-.projects .swiper-slide img{
+.projects .swiper-slide img,
+.layihe .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -213,12 +222,12 @@ header menu li {
     border-radius: 24px;
 }
 
-.projects .swiper-text {
+.projects .swiper-text,
+.layihe .swiper-text {
     position: absolute;
     color: #fff;
     z-index: 5;
     bottom: 25px;
-    /*left: 25px;*/
     padding: 0 15px;
     gap: 12px;
     display: flex;
@@ -226,15 +235,17 @@ header menu li {
     z-index: 6;
 }
 
-.projects .swiper-text h2 {
+.projects .swiper-text h2,
+.layihe .swiper-text h2 {
     font-size: 20px;
     line-height: 26px;
     text-align: left;
 }
 
-.projects .project-btn {
-    visibility: hidden; 
-    opacity: 0; 
+.projects .project-btn,
+.layihe .project-btn {
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     background: #AD3330;
     color: #fff;
@@ -244,15 +255,15 @@ header menu li {
     transition: .4s all ease;
     font-weight: 600;
     width: 160px;
-    height:48px;
+    height: 48px;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
-    
 }
 
-.projects .swiper-slide::after{
-    background: linear-gradient(180deg,transparent,#00000080);
+.projects .swiper-slide::after,
+.layihe .swiper-slide::after {
+    background: linear-gradient(180deg, transparent, #00000080);
     bottom: 0;
     content: "";
     display: block;
@@ -265,26 +276,31 @@ header menu li {
     z-index: 5;
 }
 
-.projects .swiper-slide .project-btn {
+.projects .swiper-slide .project-btn,
+.layihe .swiper-slide .project-btn {
     border-radius: 12px;
 }
 
-.projects .swiper-slide:hover .project-btn{
+.projects .swiper-slide:hover .project-btn,
+.layihe .swiper-slide:hover .project-btn {
     visibility: visible;
     opacity: 1;
 }
 
-.projects .swiper-slide:hover::after {
+.projects .swiper-slide:hover::after,
+.layihe .swiper-slide:hover::after {
     background: #00000045;
     top: 0;
     height: 100%;
 }
 
-.projects .swiper-slide:hover span {
+.projects .swiper-slide:hover span,
+.layihe .swiper-slide:hover span {
     z-index: 4;
 }
 
-.projects .swiper-slide:hover .swiper-text{
+.projects .swiper-slide:hover .swiper-text,
+.layihe .swiper-slide:hover .swiper-text {
     visibility: hidden;
     opacity: 0;
 }
