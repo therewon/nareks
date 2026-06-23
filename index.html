@@ -106,20 +106,43 @@
                             TR</div>
                     </div>
                     <ul class="max-lg:hidden flex gap-4 text-[#323232] font-bold">
-                        <li><a href="#">Satış sonrası xidmət</a></li>
-                        <li><a href="#">Elektrik və mexaniki quraşdırma</a></li>
-                        <li><a href="#">Layihənin idarə olunması</a></li>
+                        <li><a href="/service.html?id=0">Satış sonrası xidmət</a></li>
+                        <li><a href="/service.html?id=1">Elektrik və mexaniki quraşdırma</a></li>
+                        <li><a href="/service.html?id=2">Layihənin idarə olunması</a></li>
                     </ul>
                 </div>
                 <div>
-                    <a href="#"
+                    <button id="openModalBtn"
                         class="flex gap-1 max-lg:text-xs items-start px-[15px] py-2 border border-gray-300 rounded-3xl">
                         <img class="w-[20px] lg:w-[26px] h-[20px] lg:h-[26px]"
                             src="https://nareks.com/img/sendNareks.png" alt="">
                         Qiymət təklifi al
-                    </a>
+                    </button>
                 </div>
             </div>
+        </div>
+        <div id="overlay" class="hidden fixed inset-0 bg-black/60 z-40"></div>
+
+        <div id="modal"
+            class="hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[500px] w-full h-[70vh] bg-white rounded-lg shadow-xl z-50 pt-5 p-10">
+            <div class="relative">
+
+                <button id="closeModalBtn" class="absolute top-0 right-0 text-2xl text-gray-500">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div>
+                    <h2 class="text-xl font-medium py-4 border-b border-[#AD3330]">Qiymət təklifi</h2>
+                    <form class="py-4">
+                                <input type="text" placeholder="Ad, Soyad" class="px-5 py-3 mb-4 rounded border border-gray w-full">
+                                <input type="text" placeholder="Telefon nömrəniz" class="px-5 py-3 mb-4 rounded border border-gray w-full">
+                                <textarea name="" id="" rows="2" placeholder="Qeydləriniz" class="px-5 py-3 border border-gray rounded w-full mb-4"></textarea>
+                                <button class="w-full bg-[#AD3330] text-white font-medium py-3 rounded">Göndər</button>
+                            </form>
+                </div>
+
+            </div>
+
         </div>
     </header>
 
@@ -174,46 +197,8 @@
                     <h2 class="text-xl uppercase text-[#404040] font-bold">Xidmətlər</h2>
                     <a href="">bütün xidmətlər →</a>
                 </div>
-                <div class="grid md:grid-cols-3 gap-[50px] ">
-                    <div class="bg-white p-[20px] flex flex-col items-center relative">
-                        <div class="flex justify-between items-center w-full absolute top-[20px]">
-                            <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
-                                +1 il servis
-                            </div>
-                            <img src="https://nareks.com/img/sun.png" class="w-5 h-5 mr-[10px]" alt="">
-                        </div>
-                        <img class="w-full mt-[50px]" src="https://nareks.com/uploads/posts/2024-01/1706515492_x1.jpeg"
-                            alt="">
-                        <h4 class="w-full text-center font-bold pt-[15px]">Satış sonrası xidmət</h4>
-                        <a href="#"
-                            class="block py-[6px] text-[15px] bg-[#AD3330] text-white w-[200px] text-center rounded translate-y-10">Ətraflı</a>
-                    </div>
-                    <div class="bg-white p-[20px] flex flex-col items-center relative">
-                        <div class="flex justify-between items-center w-full absolute top-[20px]">
-                            <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
-                                +1 il servis
-                            </div>
-                            <img src="https://nareks.com/img/sun.png" class="w-5 h-5 mr-[10px]" alt="">
-                        </div>
-                        <img class="mt-[50px] w-full" src="https://nareks.com/uploads/posts/2024-01/1706515492_x1.jpeg"
-                            alt="">
-                        <h4 class="w-full text-center font-bold pt-[15px]">Satış sonrası xidmət</h4>
-                        <a href="#"
-                            class="block py-[6px] text-[15px] bg-[#AD3330] text-white w-[200px] text-center rounded translate-y-10">Ətraflı</a>
-                    </div>
-                    <div class="bg-white p-[20px] flex flex-col items-center relative">
-                        <div class="flex justify-between items-center w-full absolute top-[20px]">
-                            <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
-                                +1 il servis
-                            </div>
-                            <img src="https://nareks.com/img/sun.png" class="w-5 h-5 mr-[10px]" alt="">
-                        </div>
-                        <img class="w-full mt-[50px]" src="https://nareks.com/uploads/posts/2024-01/1706515492_x1.jpeg"
-                            alt="">
-                        <h4 class="w-full text-center font-bold pt-[15px]">Satış sonrası xidmət</h4>
-                        <a href="#"
-                            class="block py-[6px] text-[15px] bg-[#AD3330] text-white w-[200px] text-center rounded translate-y-10">Ətraflı</a>
-                    </div>
+                <div class="grid md:grid-cols-3 gap-[50px]" id="home-services">
+                    
                 </div>
             </div>
 

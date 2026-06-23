@@ -220,6 +220,76 @@ const bitmisLayiheler = [
   }
 ];
 
+const services = [
+  {
+    badge: "+1 il servis",
+    title: "Satış sonrası xidmət",
+    image: "https://nareks.com/uploads/posts/2024-01/1706515492_x1.jpeg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#",
+    description: "Satış sonrası xidmət, bir məhsulun satışından sonra təqdim edilən xidmətlər deməkdir. Bu  xidmətlər  adətən məhsulun quraşdırılması, texniki dəstək, təmir və baxım,  ehtiyyat hissələrin təminatı və zəmanət xidmətlərini əhatə edir. Satış sonrası xidmətlər şirkətimiz üçün, müştəri məmnuniyyətini artırmaq, müştəri qazanmaq və marka imicinə təsir etmək məqsədi ilə vacibdir."
+  },
+  {
+    badge: "+1 il servis",
+    title: "Elektrik və mexaniki quraşdırma",
+    image: "https://nareks.com/uploads/posts/2024-01/1706517243_x32-min.jpeg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#",
+    description: 'Elektrik və mexaniki quraşdırma Elektrik və mexaniki quraşdırma terminləri ümumiyyətlə tikinti, sənaye obyektləri və oxşar sahələrdə istifadə olunan anlayışlardır. Hər ikisi obyekt və ya sistemin elektrik və ya mexaniki komponentlərinin yığılmasını əhatə edir. Burada hər birinin qısa təsviri verilmişdir: Elektrik quraşdırma: Elektrik quraşdırma bir binanın və ya obyektin elektrik sistemlərinin yığılmasını və quraşdırılmasını əhatə edir. Buraya əsas elektrik panellərinin quraşdırılması, kabellərin çəkilməsi, rozetkaların və açarların quraşdırılması, işıqlandırma qurğularının yerləşdirilməsi və digər elektrik komponentlərinin quraşdırılması daxildir. Mexaniki quraşdırma: Mexaniki quraşdırma ümumiyyətlə boru kəmərləri, avadanlıqların quraşdırılması, istilik, havalandırma, kondisioner (HVAC) sistemləri, sənaye maşınlarının quraşdırılması kimi mexaniki komponentlərin yığılmasını əhatə edir. Buraya boruların çəkilməsi, avadanlıqların quraşdırılması, sistemlərin birləşdirilməsi və digər mexaniki komponentlərin yerləşdirilməsi kimi işlər daxildir. Hər iki quraşdırma prosesi planlaşdırma, material tədarükü, montaj əməliyyatları, yekun yoxlama və sınaqdan başlayaraq çoxlu prosesləri əhatə edir. İşin xarakterindən və mürəkkəbliyindən asılı olaraq, elektrik və mexaniki qurğular çox vaxt ayrı-ayrı qruplar və ya mütəxəssislər tərəfindən həyata keçirilir.'
+  },
+  {
+    badge: "+1 il servis",
+    title: "Layihənin idarə olunması",
+    image: "https://nareks.com/uploads/posts/2024-01/1706517859_x4-min.jpeg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#",
+    description: 'Layihənin idarə edilməsi xidməti” termini ümumiyyətlə layihənin bütün proseslərinin planlaşdırılması, əlaqələndirilməsi, həyata keçirilməsi, monitorinqi və idarə edilməsini özündə birləşdirən xidmətə aiddir. Bu xidmətə layihənin başlanğıcından tamamlanmasına qədər bir sıra idarəetmə fəaliyyətləri daxildir. Bu xidmətin əhatə dairəsinə aşağıdakılar daxil ola bilər: Layihənin Planlaşdırılması: Layihənin məqsədləri və əhatə dairəsinin müəyyən edilməsi, resursların bölüşdürülməsi, vaxt qrafiklərinin yaradılması və büdcənin müəyyən edilməsi kimi fəaliyyətlərin planlaşdırılması; Resursların İdarə Edilməsi: Əmək, maddi və maliyyə resurslarının səmərəli idarə edilməsi; Rabitə İdarəetmə: Layihə qrupu, maraqlı tərəflər və digər aidiyyəti tərəflər arasında effektiv ünsiyyətin təmin edilməsi; Risklərin idarə edilməsi: Mümkün riskləri müəyyən etmək, təhlil etmək və onlara qarşı tədbirlər görmək; Tərəqqinin Monitorinqi və Hesabatı: Layihənin gedişatının monitorinqi, müntəzəm hesabatların hazırlanması və maraqlı tərəflərə təqdim edilməsi; Dəyişikliklərin İdarə Edilməsi: Layihə prosesində baş verən dəyişiklikləri müəyyən etmək, qiymətləndirmək və idarə etmək.'
+  },
+  {
+    badge: "+1 il servis",
+    title: "Sistem dizaynı",
+    image: "https://nareks.com/uploads/posts/2024-02/1706964469_sss.jpeg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#"
+  },
+  {
+    badge: "+1 il servis",
+    title: "Avadanlıq zəmanəti",
+    image: "https://nareks.com/uploads/posts/2024-01/1706170161_766_original.jpg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#"
+  },
+  {
+    badge: "+1 il servis",
+    title: "Nəzarətçi xidməti",
+    image: "https://nareks.com/uploads/posts/2024-01/1706170286_a-relationship-between-logistics-marketing.jpg",
+    icon: "https://nareks.com/img/sun.png",
+    url: "#"
+  }
+];
+
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const modal = document.getElementById("modal");
+const overlay = document.getElementById("overlay");
+
+if(openModalBtn) openModalBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+
+    // scroll bağlamaq istəyirsənsə
+    document.body.classList.add("overflow-hidden");
+});
+
+function closeModal() {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+}
+
+if(closeModalBtn) closeModalBtn.addEventListener("click", closeModal);
+if(overlay) overlay.addEventListener("click", closeModal);
+
 const bottomHeader = document.getElementById("bottomHeader");
 const headingProject = document.getElementById("heading-project")
 const navProject = document.getElementById("nav-project")
@@ -233,7 +303,6 @@ let project;
 const params = new URLSearchParams(window.location.search);
 const page = params.get("page");
 const id = Number(params.get("id"))
-console.log(params)
 
 page == 'completed' ? project = bitmisLayiheler[id] : project = davamEdenLayiheler[id]
 
@@ -298,6 +367,65 @@ if (project) {
 } else {
   console.error("Project tapılmadı!");
 }
+
+
+// Service scripts
+
+const serviceTitle = document.getElementById("service-title")
+const serviceNav = document.getElementById("service-nav")
+const homeService = document.getElementById("home-services")
+const serviceSection = document.getElementById("service-section")
+const serviceImg = document.getElementById("service-img")
+const serviceDescription = document.getElementById("service-description")
+const serviceHeading = document.getElementById('service-heading')
+
+const service = services[id]
+
+if(serviceTitle) serviceTitle.innerHTML = service.title
+if(serviceHeading) serviceHeading.innerHTML = service.title
+if(serviceNav) serviceNav.innerHTML += service.title
+if(serviceImg) serviceImg.src = service.image
+if(serviceDescription) serviceDescription.innerHTML = service.description
+
+
+
+services.filter((item,index)=> index < 3).map((item,index)=> {
+  if(homeService){ homeService.innerHTML += `
+    <div class="bg-white p-[20px] flex flex-col items-center relative">
+                        <div class="flex justify-between items-center w-full absolute top-[20px]">
+                            <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
+                                +1 il servis
+                            </div>
+                            <img src="https://nareks.com/img/sun.png" class="w-5 h-5 mr-[10px]" alt="">
+                        </div>
+                        <img class="w-full h-[200px] mt-[50px]" src=${item.image}
+                            alt="">
+                        <h4 class="w-full text-center font-bold pt-[15px]">${item.title}</h4>
+                        <a href="/service.html?id=${index}"
+                            class="block py-[6px] text-[15px] bg-[#AD3330] text-white w-[200px] text-center rounded absolute bottom-0 translate-y-1/2">Ətraflı</a>
+    </div>
+  `}
+})
+
+services.map((item,index)=> {
+  if(serviceSection) serviceSection.innerHTML += `
+    <div class="bg-white p-[20px] flex flex-col items-center relative">
+                        <div class="flex justify-between items-center w-full absolute top-[20px]">
+                            <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
+                                +1 il servis
+                            </div>
+                            <img src="https://nareks.com/img/sun.png" class="w-5 h-5 mr-[10px]" alt="">
+                        </div>
+                        <img class="w-full h-[200px] mt-[50px]" src=${item.image}
+                            alt="">
+                        <h4 class="w-full text-center font-bold pt-[15px]">${item.title}</h4>
+                        <a href="/service.html?id=${index}"
+                            class="block py-[6px] text-[15px] bg-[#AD3330] text-white w-[200px] text-center rounded absolute bottom-0 translate-y-1/2">Ətraflı</a>
+    </div>
+  `
+})
+
+
 
 
 const swiper = new Swiper(".mySwiper", {
