@@ -141,7 +141,6 @@ header menu li {
 .projects .btn,
 .layihe .btn {
     cursor: pointer;
-    padding: 1rem 4rem;
     border: 0;
     background-color: #ad332f;
     color: white;
@@ -152,7 +151,7 @@ header menu li {
     position: relative;
     margin-top: 2rem;
     margin-left: auto;
-    width: 300px;
+    max-width: 300px;
     margin-right: auto;
     display: flex;
     align-items: center;
@@ -363,13 +362,12 @@ header menu li {
     display: flex;
     gap: 25px;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .informations-inner article {
     cursor: pointer;
-    width: 31%;
-    min-width: 31%;
+    /* width: 31%;
+    min-width: 31%; */
 }
 
 .informations-inner article:hover img {
@@ -440,8 +438,8 @@ footer { background: #000; padding: 40px 0 30px 0}
 footer .logo { width: 130px }
 .footer-main a { color: #fff }
 .footer-main ul { display: inline-block }
-.footer-main .row .footer-item { text-align: right }
-.footer-main .row .footer-item ul { text-align: left }
+/* .footer-main .row .footer-item { text-align: right }
+.footer-main .row .footer-item ul { text-align: left } */
 .footer-main ul li { margin-bottom: 10px }
 .footer-main ul li a { font-size: 13px; color:#bdc6cf }
 .footer-main ul li a:hover { color: #fff ;}
@@ -481,7 +479,7 @@ footer .logo { width: 130px }
     color: #fff !important;
     font-size: 17px;
     font-weight: 600;
-    text-align: end;
+    /* text-align: end; */
     margin-bottom: 10px;
     transition: 0.1s ease-in-out;
 }
@@ -489,13 +487,13 @@ footer .logo { width: 130px }
 .footer-numbers a:hover { color: var(--main-color)!important }
 
 .footer-numbers i { color: var(--main-color) }
-.footer-numbers ul li { text-align: right }
+/* .footer-numbers ul li { text-align: right } */
 .footer-numbers ul li a {
-    font-size: 17px!important;
+    font-size: 17px !important;
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
 .footer-numbers .email span { color:#bdc6cf }
@@ -558,4 +556,17 @@ footer .logo { width: 130px }
     -o-box-shadow: 0 0 0 0 #ED1C24;
     box-shadow: 0 0 0 0 #ED1C24;
 }
+}
+
+@media (max-width: 640px) {
+    .footer-main {
+        font-size: 13px;
+    }
+
+    .footer-item ul li a {
+        font-size: 13px !important;
+    }
+    .footer-numbers ul li a{
+        justify-content: center;
+    }
 }

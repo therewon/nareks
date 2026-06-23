@@ -123,71 +123,44 @@
     </header>
 
     <main>
-       <section class="bg-[#f6f6f6] py-[40px]">
-            <div class="max-w-[1320px] mx-auto">
-                <div class="sm:flex justify-between mb-[30px] max-lg:px-3">
-                    <h2 class="text-xl text-[#404040] font-bold">Məhsullar</h2>
-                    <a href="" class="!text-[#a7a9b2]">Ana səhifə <i class="fa-solid fa-right-long"></i> Məhsullar </a>
-                </div>
-                <div class="products grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-[50px]">
-                    <div class="card">
-                        <img src="https://nareks.com/img/HVAC.webp" alt="">
-                        <div class="text">
-                            <h5>HVAC məhsulları</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
+        <section class="bg-[#f6f6f6]">
+            <div class="max-w-[1320px] mx-auto md:flex justify-between items-center md:py-10 py-[30px] max-lg:px-3">
+                <h2 id="card-title" class="md:text-[25px] text-xl text-[#404040] font-bold pb-3"></h2>
+                <a id="card-nav" class="!text-[#a7a9b2]" href="/referanslar/" >
+                    Ana səhifə <i class="fa-solid fa-right-long"></i>
+                </a>
+            </div>
+
+            <div class="bg-white py-[60px] text-[#212529]">
+                <div class="max-w-[1320px] mx-auto grid md:grid-cols-3 max-lg:px-3">
+                    <div class="md:col-span-2 px-3">
+                        <h3 id="project-name" class="text-[36px]"></h3>
+                        <img id="project-image" class="mb-1 mt-5" src="" alt="">
+                        <p>Qazlı Söndürmə \ BMS sistemləri</p>
                     </div>
-                    <div class="card">
-                        <img src="https://nareks.com/uploads/posts/2024-01/1706611706_p3.jpeg" alt="">
-                        <div class="text">
-                            <h5>PLC avtomatlaşdırma sistemləri</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/uploads/posts/2024-08/1722603559_yangin.webp" alt="">
-                        <div class="text">
-                            <h5>Yanğın mühafizə sistemləri</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/img/istehsak.jpg" alt="">
-                        <div class="text">
-                            <h5>Panel istehsalı</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/img/HVAC.webp" alt="">
-                        <div class="text">
-                            <h5>HVAC məhsulları</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/img/HVAC.webp" alt="">
-                        <div class="text">
-                            <h5>HVAC məhsulları</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/img/HVAC.webp" alt="">
-                        <div class="text">
-                            <h5>HVAC məhsulları</h5>
-                            <a href="">Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="https://nareks.com/img/HVAC.webp" alt="">
-                        <div class="text">
-                            <h5>HVAC məhsulları</h5>
-                            <a href="">Ətraflı</a>
+                    <div class="md:col-span-1 px-3">
+                        <h4 class="text-[25px] mb-5">Bizə müraciət</h4>
+                        <div class="rounded-3xl bg-white shadow-2xl  py-8 px-6 w-full">
+                            <form>
+                                <input type="text" placeholder="Ad, Soyad" class="px-5 py-3 mb-4 rounded border border-gray w-full">
+                                <input type="text" placeholder="Telefon nömrəniz" class="px-5 py-3 mb-4 rounded border border-gray w-full">
+                                <select name="" id="" class="appearance-none text-sm px-5 py-3 mb-4 rounded border border-gray w-full">
+                                    <option selected="selected" disabled>-- Xidmət növünü seçin --</option>
+                                    <option value="Satış sonrası xidmət">Satış sonrası xidmət</option>
+                                    <option value="Elektrik və mexaniki quraşdırma">Elektrik və mexaniki quraşdırma</option>
+                                    <option value="Layihənin idarə olunması">Layihənin idarə olunması</option>
+                                    <option value="Sistem dizaynı">Sistem dizaynı</option>
+                                    <option value="Avadanlıq zəmanəti">Avadanlıq zəmanəti</option>
+                                    <option value="Nəzarətçi xidməti">Nəzarətçi xidməti</option>
+                                </select>
+                                <textarea name="" id="" rows="7" placeholder="Qeydləriniz" class="px-5 py-3 border border-gray rounded w-full mb-4"></textarea>
+                                <button class="w-full bg-[#AD3330] text-white font-medium py-3 rounded">Göndər</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </section>
         <section class="bg-gradient-to-r from-[#ad3330] to-black w-full flex flex-col items-center py-10">
             <h2 class="mb-[22px] md:text-[32px] text-[24px] max-md:text-center text-white">Xidmətlərimizlə bağlı
@@ -196,7 +169,6 @@
             <a href="" class="block py-[15px] px-5 bg-white sm:text-xl text-[15px]">Zəng sifarişi et</a>
         </section>
     </main>
-
 
     <footer>
         <div class="max-w-[1320px] mx-auto px-4">

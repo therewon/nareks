@@ -15,9 +15,10 @@
 <body>
     <header class=" z-[999]">
         <div class="bg-[#F6F6F6]">
-            <div class="max-w-[1320px] mx-auto py-[5px] px-1 flex justify-between items-center">
-                <img class="w-[130px]" src="https://nareks.com/img/nareks-logo.png" alt="logo">
-                <menu>
+            <div
+                class="max-w-[1320px] mx-auto lg:py-[5px] py-[10px] max-lg:px-3 px-1 flex max-lg:flex-row-reverse justify-between items-center">
+                <img class="lg:w-[130px] w-[100px]" src="https://nareks.com/img/nareks-logo.png" alt="logo">
+                <menu class="max-lg:hidden">
                     <ul class="flex gap-5">
                         <li><a href="/index.html">Ana səhifə</a></li>
                         <li><a href="/about.html">Şirkət</a></li>
@@ -34,13 +35,13 @@
                transition-all duration-300 bg-white shadow-lg rounded-md w-48 z-50 -translate-x-1/3">
 
                                 <li class="py-0">
-                                    <a href="/bitmis-layiheler" class="block px-4 hover:bg-gray-100">
+                                    <a href="/layiheler.html?page=completed" class="block px-4 hover:bg-gray-100">
                                         Bitmiş layihələr
                                     </a>
                                 </li>
 
                                 <li class="py-0">
-                                    <a href="/davam-eden-layiheler" class="block px-4 hover:bg-gray-100">
+                                    <a href="/layiheler.html?page=ungoing" class="block px-4 hover:bg-gray-100">
                                         Davam edən layihələr
                                     </a>
                                 </li>
@@ -51,7 +52,7 @@
                         <li><a href="/contacts.html">Əlaqə</a></li>
                     </ul>
                 </menu>
-                <div class="flex items-center gap-2">
+                <div class="hidden lg:flex items-center gap-2">
                     <div
                         class="w-9 h-9 rounded-[18px] text-[11px] text-white bg-black/20 flex justify-center items-center">
                         AZ</div>
@@ -62,20 +63,59 @@
                         class="w-9 h-9 rounded-[18px] text-[11px] text-white bg-black/10 flex justify-center items-center">
                         TR</div>
                 </div>
+
+                <div class="lg:hidden">
+                    <div id="menuBtn"
+                        class="w-[45px] h-[45px] rounded-full bg-[#e1e1e15e] flex lg:hidden items-center justify-center cursor-pointer">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div id="mobileMenu" class="fixed top-0 left-0 w-[320px] h-screen bg-[#323232] text-white z-50
+                        -translate-x-[320px] transition-transform duration-300 ease-in-out">
+                        <div class="flex justify-end p-5">
+                            <button id="closeBtn" class="text-[24px]"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+
+                        <nav class="px-6">
+                            <ul class="flex flex-col gap-6 text-xl">
+                                <li><a href="/index.html">Ana səhifə</a></li>
+                                <li><a href="/about.html">Şirkət</a></li>
+                                <li><a href="/products.html">Məhsullar</a></li>
+                                <li><a href="/services.html">Xidmətlər</a></li>
+                                <li><a href="/blogs.html">Bloqlar</a></li>
+                                <li><a href="/lahiyeler.html">Layihələr</a></li>
+                                <li><a href="/sertifikatlar.html">Sertifikatlar</a></li>
+                                <li><a href="/contacts.html">Əlaqə</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="bottomHeader" class="w-full bg-white transition-all duration-300">
-            <div class="max-w-[1320px] mx-auto py-[6px] flex justify-between items-center">
+        <div id="bottomHeader" class="w-full max-lg:px-3 bg-white transition-all duration-300">
+            <div class="max-w-[1320px] mx-auto lg:py-[6px] py-[15px] flex justify-between items-center">
                 <div>
-                    <ul class="flex gap-4 text-[#323232] font-bold">
+                    <div class="flex lg:hidden items-center gap-2">
+                        <div
+                            class="w-[30px] h-[30px] rounded-[18px] text-[10px] text-white bg-black/20 flex justify-center items-center">
+                            AZ</div>
+                        <div
+                            class="w-[30px] h-[30px] rounded-[18px] text-[10px] text-white bg-black/10 flex justify-center items-center">
+                            EN</div>
+                        <div
+                            class="w-[30px] h-[30px] rounded-[18px] text-[10px] text-white bg-black/10 flex justify-center items-center">
+                            TR</div>
+                    </div>
+                    <ul class="max-lg:hidden flex gap-4 text-[#323232] font-bold">
                         <li><a href="#">Satış sonrası xidmət</a></li>
                         <li><a href="#">Elektrik və mexaniki quraşdırma</a></li>
                         <li><a href="#">Layihənin idarə olunması</a></li>
                     </ul>
                 </div>
                 <div>
-                    <a href="#" class="flex gap-1 items-start px-[15px] py-2 border border-gray-300 rounded-3xl">
-                        <img class="w-[26px] h-[26px]" src="https://nareks.com/img/sendNareks.png" alt="">
+                    <a href="#"
+                        class="flex gap-1 max-lg:text-xs items-start px-[15px] py-2 border border-gray-300 rounded-3xl">
+                        <img class="w-[20px] lg:w-[26px] h-[20px] lg:h-[26px]"
+                            src="https://nareks.com/img/sendNareks.png" alt="">
                         Qiymət təklifi al
                     </a>
                 </div>
@@ -90,45 +130,51 @@
                     <div
                         class="swiper-slide relative flex items-end justify-start bg-[url('https://nareks.com/uploads/posts/2024-08/1724745788_heyderaliyev.jpg')] bg-center bg-cover bg-no-repeat">
                         <div class="absolute inset-0 bg-black/40"></div>
-                        <div class="max-w-[1320px] mx-auto mb-10 text-white w-full z-10 relative">
-                            <h2 class="text-[36px] pb-[10px] mb-[15px]">Ehtiyacınız olan güvənli elektrik xətti</h2>
-                            <a href="" class="bg-[#AD3330] p-[14px] block rounded-xl text-center w-[150px]">Ətraflı</a>
+                        <div class="max-w-[1320px]  max-lg:px-3 mx-auto mb-10 text-white w-full z-10 relative">
+                            <h2 class="md:text-[36px] text-[22px] pb-[10px] mb-[15px]">Ehtiyacınız olan güvənli elektrik
+                                xətti</h2>
+                            <a href=""
+                                class="bg-[#AD3330] p-[10px] md::p-[14px] max-md:text-[15px] block rounded-xl text-center w-[150px]">Ətraflı</a>
                         </div>
                     </div>
 
                     <div
                         class="swiper-slide relative flex items-end justify-start bg-[url('https://nareks.com/uploads/posts/2024-08/1724741495_nareksslider2.jpg')] bg-center bg-cover bg-no-repeat">
                         <div class="absolute inset-0 bg-black/40"></div>
-                        <div class="max-w-[1320px] mx-auto mb-10 text-white w-full z-50">
-                            <h2 class="text-[36px] pb-[10px] mb-[15px]">Nareks ilə layihələrinizə təcrübə və keyfiyyət
+                        <div class="max-w-[1320px]  max-lg:px-3 mx-auto mb-10 text-white w-full z-50">
+                            <h2 class="md:text-[36px] text-[22px] pb-[10px] mb-[15px]">Nareks ilə layihələrinizə təcrübə
+                                və keyfiyyət
                                 qatın!</h2>
-                            <a href="" class="bg-[#AD3330] p-[14px] block rounded-xl text-center w-[150px]">Ətraflı</a>
+                            <a href=""
+                                class="bg-[#AD3330] p-[10px] md::p-[14px] max-md:text-[15px] block rounded-xl text-center w-[150px]">Ətraflı</a>
                         </div>
                     </div>
 
                     <div
                         class="swiper-slide relative flex items-end justify-start bg-[url('https://nareks.com/uploads/posts/2024-08/1724746747_whatsapp-image-2024-08-27-at-12_12_22_b7d2de7e.jpg')] bg-center bg-cover bg-no-repeat">
                         <div class="absolute inset-0 bg-black/40"></div>
-                        <div class="max-w-[1320px] mx-auto mb-10 text-white w-full z-50">
-                            <h2 class="text-[36px] pb-[10px] mb-[15px]">Mühəndisliklə keyfiyyət və innovasiyanın
+                        <div class="max-w-[1320px] max-lg:px-3 mx-auto mb-10 text-white w-full z-50">
+                            <h2 class="md:text-[36px] text-[22px] pb-[10px] mb-[15px]">Mühəndisliklə keyfiyyət və
+                                innovasiyanın
                                 qovuşduğu yer!</h2>
-                            <a href="" class="bg-[#AD3330] p-[14px] block rounded-xl text-center w-[150px]">Ətraflı</a>
+                            <a href=""
+                                class="bg-[#AD3330] p-[10px] md::p-[14px] max-md:text-[15px] block rounded-xl text-center w-[150px]">Ətraflı</a>
                         </div>
                     </div>
 
                 </div>
-                <div class="swiper-button-prev nav-btn "></div>
-                <div class="swiper-button-next nav-btn"></div>
+                <div class="max-lg:hidden swiper-button-prev nav-btn "></div>
+                <div class="max-lg:hidden swiper-button-next nav-btn"></div>
             </div>
         </section>
 
         <section class="pt-[60px] pb-[70px] bg-[#f2f2f2]">
-            <div class="max-w-[1320px] mx-auto">
+            <div class="max-w-[1320px] mx-auto max-lg:px-3">
                 <div class="flex justify-between pb-[30px]">
                     <h2 class="text-xl uppercase text-[#404040] font-bold">Xidmətlər</h2>
                     <a href="">bütün xidmətlər →</a>
                 </div>
-                <div class="grid grid-cols-3 gap-[50px] ">
+                <div class="grid md:grid-cols-3 gap-[50px] ">
                     <div class="bg-white p-[20px] flex flex-col items-center relative">
                         <div class="flex justify-between items-center w-full absolute top-[20px]">
                             <div class="py-[5px] px-[12px] bg-[#AD3330] text-white">
@@ -175,7 +221,7 @@
 
         <section class="bg-[#f6f6f6] py-[60px]">
             <div class="max-w-[1320px] mx-auto">
-                <div class="flex justify-between mb-[30px]">
+                <div class="flex justify-between mb-[30px] max-lg:px-3">
                     <h2 class="text-xl uppercase text-[#404040] font-bold">Məhsullar</h2>
                     <a href="">bütün məhsullar →</a>
                 </div>
@@ -240,7 +286,7 @@
             </div>
         </section>
         <section class="projects">
-            <div class="max-w-[1320px] mx-auto">
+            <div class="max-w-[1320px] mx-auto max-lg:px-3">
                 <h2 class="uppercase w-full text-center text-[#404040] text-xl font-bold mb-8">Layihələr</h2>
                 <div>
                     <div class="projects__inner">
@@ -318,19 +364,19 @@
                             </div>
                             <div class="swiper-pagination-projects"></div>
                         </div>
-                        <a href="/layiheler/" class="btn">Bütün layihələrə bax</a>
+                        <a href="/layiheler/" class="btn py-4 sm:px-16">Bütün layihələrə bax</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="informations">
-            <div class="max-w-[1320px] mx-auto">
+            <div class="max-w-[1320px] mx-auto max-lg:px-3">
                 <div class="flex justify-between mb-[30px]">
                     <h2 class="text-[20px] text-[#404040] font-[500] uppercase">Bloqlar</h2>
-                    <a href="/bloqlar/" class="section_link">bütün bloqlar &rarr;</a>
+                    <a href="/bloqlar/" class="section_link">bütün bloqlar <i class="fa-solid fa-right-long"></i></a>
                 </div>
-                <div class="informations-inner">
+                <div class="informations-inner max-lg:flex-wrap">
                     <article>
                         <a href="https://nareks.com/bloqlar/54-nzart-xidmtinin-ustunluklri.html">
                             <img src="https://nareks.com/uploads/posts/2024-02/1706794730_s3.webp" alt="" />
@@ -366,11 +412,11 @@
         </section>
 
         <section class="references">
-            <div class="max-w-[1320px] mx-auto">
+            <div class="max-w-[1320px] mx-auto max-lg:px-3">
                 <div class="flex justify-between items-center mb-[30px]">
                     <h2 class="text-[20px] text-[#404040] font-[500] uppercase pb-3">Referanslar</h2>
                     <a href="/referanslar/">
-                        bütün referanslar &rarr;
+                        bütün referanslar <i class="fa-solid fa-right-long"></i>
                     </a>
                 </div>
 
@@ -476,104 +522,106 @@
         </section>
 
         <section class="bg-gradient-to-r from-[#ad3330] to-black w-full flex flex-col items-center py-10">
-            <h2 class="mb-[22px] text-[32px] text-white">Xidmətlərimizlə bağlı sualınız varsa, icazə verin sizə zəng
+            <h2 class="mb-[22px] md:text-[32px] text-[24px] max-md:text-center text-white">Xidmətlərimizlə bağlı
+                sualınız varsa, icazə verin sizə zəng
                 edək!</h2>
-            <a href="" class="block py-[15px] px-5 bg-white text-xl">Zəng sifarişi et</a>
+            <a href="" class="block py-[15px] px-5 bg-white sm:text-xl text-[15px]">Zəng sifarişi et</a>
         </section>
     </main>
 
 
     <footer>
-    <div class="max-w-[1320px] mx-auto px-4">
+        <div class="max-w-[1320px] mx-auto px-4">
 
-        <div class="footer-top flex items-center justify-between py-6">
-            <img class="logo w-[140px]" src="https://nareks.com/img/nareks-logo-white.png" alt="" />
+            <div class="footer-top flex items-center justify-between py-6">
+                <img class="logo w-[140px]" src="https://nareks.com/img/nareks-logo-white.png" alt="" />
 
-            <div class="footer-socials flex gap-4 text-xl">
-                <a href="https://www.facebook.com/share/NrGiwP3nQetGfWNx/?mibextid=qi2Omg" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/nareks_automation?igsh=N2FqZDRjdWpsdnBy" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://x.com/NareksMMC?t=W5XoxWk8oZBlkznQ3YQLow&s=09" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
+                <div class="footer-socials flex gap-4 text-xl">
+                    <a href="https://www.facebook.com/share/NrGiwP3nQetGfWNx/?mibextid=qi2Omg" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nareks_automation?igsh=N2FqZDRjdWpsdnBy" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/NareksMMC?t=W5XoxWk8oZBlkznQ3YQLow&s=09" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="footer-main">
-            <div class="row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="footer-main">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-sm:text-center">
 
-                <div class="col-lg-3 col-6 footer-item footer-item-1">
-                    <ul class="space-y-2">
-                        <li><a href="">Ana səhifə</a></li>
-                        <li><a href="/haqqimizda/">Şirkət</a></li>
-                        <li><a href="/mehsullar/">Məhsullar</a></li>
-                    </ul>
+                    <div class="footer-item footer-item-1">
+                        <ul class="space-y-2">
+                            <li><a href="">Ana səhifə</a></li>
+                            <li><a href="/haqqimizda/">Şirkət</a></li>
+                            <li><a href="/mehsullar/">Məhsullar</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item footer-item-2">
+                        <ul class="space-y-2">
+                            <li><a href="/xidmetler/">Xidmətlər</a></li>
+                            <li><a href="/bloqlar/">Bloqlar</a></li>
+                            <li><a href="/layiheler/">Layihələr</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item footer-item-3">
+                        <ul class="space-y-2">
+                            <li><a href="/sertifikatlar/">Sertifikatlar</a></li>
+                            <li><a href="/referanslar/">Referanslar</a></li>
+                            <li><a href="/elaqe/">Əlaqə</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item footer-item-4 footer-numbers">
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="tel:+994125115341" class="flex items-center gap-2">
+                                    <i style="position: relative; " class="fa-solid fa-phone"></i>
+                                    +994 (12) 511 53 41
+                                </a>
+                            </li>
+
+                            <li>
+                                <a target="_blank"
+                                    href="https://api.whatsapp.com/send?phone=++903124182881&text=Salam, sizə Nareks saytından yazıram."
+                                    class="flex items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i>
+                                    +90 (312) 418 28 81
+                                </a>
+                            </li>
+
+                            <li class="email">
+                                <a href="mailto:info@nareks.com" class="flex items-center gap-2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email</span>
+                                    info@nareks.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-
-                <div class="col-lg-3 col-6 footer-item footer-item-2">
-                    <ul class="space-y-2">
-                        <li><a href="/xidmetler/">Xidmətlər</a></li>
-                        <li><a href="/bloqlar/">Bloqlar</a></li>
-                        <li><a href="/layiheler/">Layihələr</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-2 footer-item footer-item-3">
-                    <ul class="space-y-2">
-                        <li><a href="/sertifikatlar/">Sertifikatlar</a></li>
-                        <li><a href="/referanslar/">Referanslar</a></li>
-                        <li><a href="/elaqe/">Əlaqə</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-10 footer-item footer-item-4 footer-numbers">
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="tel:+994125115341" class="flex items-center gap-2">
-                                <i style="position: relative; left: -6px"
-                                   class="fa-solid fa-phone"></i>
-                                +994 (12) 511 53 41
-                            </a>
-                        </li>
-
-                        <li>
-                            <a target="_blank"
-                               href="https://api.whatsapp.com/send?phone=++903124182881&text=Salam, sizə Nareks saytından yazıram."
-                               class="flex items-center gap-2">
-                                <i class="fa-solid fa-phone"></i>
-                                +90 (312) 418 28 81
-                            </a>
-                        </li>
-
-                        <li class="email">
-                            <a href="mailto:info@nareks.com" class="flex items-center gap-2">
-                                <i class="fa-solid fa-envelope"></i>
-                                <span>Email</span>
-                                info@nareks.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
-        </div>
 
-        <div class="footer-bottom row flex flex-col sm:flex-row items-center justify-between ">
-            <div class="copyright flex flex-col sm:flex-row items-center justify-between w-full text-sm">
-                <p>Copyright © <span id="year">2023</span> Nareks.</p>
+            <div class="footer-bottom row flex flex-col sm:flex-row items-center justify-between ">
+                <div
+                    class="copyright flex flex-col sm:flex-row items-center justify-between w-full text-sm text-center">
+                    <p class="max-sm:mb-6">Copyright © <span id="year">2023</span> Nareks.</p>
 
-                <a href="https://okmedia.az/" target="_blank" class="flex items-center gap-2 mt-2 sm:mt-0">
-                    Site by
-                    <img class="oklogo w-[60px]" src="https://nareks.com/img/oklogo.png" alt="">
-                </a>
+                    <a href="https://okmedia.az/" target="_blank"
+                        class="flex items-center gap-2 mt-2 sm:mt-0 whitespace-nowrap">
+                        Site by
+                        <img class="oklogo sm:w-[60px] w-[100px]" src="https://nareks.com/img/oklogo.png" alt="">
+                    </a>
+                </div>
             </div>
-        </div>
 
-    </div>
-</footer>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/76374eef7a.js" crossorigin="anonymous"></script>
