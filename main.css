@@ -484,10 +484,16 @@ footer .logo { width: 130px }
     transition: 0.1s ease-in-out;
 }
 
-.footer-numbers a:hover { color: var(--main-color)!important }
+.footer-item-4 {
+    display: flex;
+    justify-content: end !important;
+}
+
+
+.footer-numbers a:hover { color: var(--main-color) !important }
 
 .footer-numbers i { color: var(--main-color) }
-/* .footer-numbers ul li { text-align: right } */
+.footer-numbers ul li { text-align: right }
 .footer-numbers ul li a {
     font-size: 17px !important;
     display: flex;
@@ -569,4 +575,7 @@ footer .logo { width: 130px }
     .footer-numbers ul li a{
         justify-content: center;
     }
+    .footer-item-4 {
+        justify-content: center !important;
+}
 }
